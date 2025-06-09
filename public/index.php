@@ -82,71 +82,119 @@ if (isset($_POST['submit'])) {
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Nạp thẻ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>🧿 MUA KEY VIP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap + jQuery -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #001f3f, #0074D9);
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            animation: pulseBG 10s infinite alternate;
+        }
+        @keyframes pulseBG {
+            from { background-position: 0% 50%; }
+            to   { background-position: 100% 50%; }
+        }
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00f7ff;
+            box-shadow: 0 0 20px #00f7ff;
+        }
+        label {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+        .form-control {
+            background: #111;
+            color: #0ff;
+            border: 1px solid #00ffcc;
+        }
+        .btn-success {
+            background-color: #00ffcc;
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+        .modal-content {
+            background: #000;
+            color: #00ffcc;
+            border: 2px solid #00ffcc;
+            box-shadow: 0 0 30px #00ffcc;
+        }
+    </style>
 </head>
 <body>
+
 <div class="container">
-    <div class="row" style="margin-top: 50px;">
-        <div class="col-md-8" style="float:none;margin:0 auto;">
-            <form method="POST" action="">
-                <div class="form-group">
-                    <label>Loại thẻ:</label>
-                    <select class="form-control" name="telco">
-                        <option value="">Chọn loại thẻ</option>
-                        <option value="VIETTEL">Viettel</option>
-                        <option value="VIETTELAUTO">Viettel Auto</option>
-                        <option value="MOBIFONE">Mobifone</option>
-                        <option value="MOBIFONEAUTO">Mobifone Auto</option>
-                        <option value="VINAPHONE">Vinaphone</option>
-                        <option value="VINAPHONEAUTO">Vinaphone Auto</option>
-                        <option value="GATE">Gate</option>
-                        <option value="ZING">Zing</option>
-                        <option value="MEGACARD">Megacard</option>
-                        <option value="BIT">BIT</option>
-                        <option value="GARENA">Garena</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Mệnh giá:</label>
-                    <select class="form-control" name="amount">
-                        <option value="">Chọn mệnh giá</option>
-                        <option value="10000">10.000</option>
-                        <option value="20000">20.000</option>
-                        <option value="30000">30.000</option>
-                        <option value="50000">50.000</option>
-                        <option value="100000">100.000</option>
-                        <option value="200000">200.000</option>
-                        <option value="300000">300.000</option>
-                        <option value="500000">500.000</option>
-                        <option value="1000000">1.000.000</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Số seri:</label>
-                    <input type="text" class="form-control" name="serial"/>
-                </div>
-                <div class="form-group">
-                    <label>Mã thẻ:</label>
-                    <input type="text" class="form-control" name="code"/>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block" name="submit">NẠP NGAY</button>
-                </div>
-            </form>
+    <div class="row justify-content-center" style="margin-top: 50px;">
+        <div class="col-md-6">
+            <div class="card p-4">
+                <h3 class="text-center text-info mb-4">💎 MENU MUA KEY VIP 💎</h3>
+                <form method="POST">
+                    <div class="form-group">
+                        <label>Loại thẻ:</label>
+                        <select class="form-control" name="telco" required>
+                            <option value="">-- Chọn loại thẻ --</option>
+                            <option value="VIETTEL">Viettel</option>
+                            <option value="MOBIFONE">Mobifone</option>
+                            <option value="VINAPHONE">Vinaphone</option>
+                            <option value="ZING">Zing</option>
+                            <option value="GARENA">Garena</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mệnh giá:</label>
+                        <select class="form-control" name="amount" required>
+                            <option value="">-- Chọn mệnh giá --</option>
+                            <option value="10000">10.000</option>
+                            <option value="20000">20.000</option>
+                            <option value="50000">50.000</option>
+                            <option value="100000">100.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Serial:</label>
+                        <input type="text" class="form-control" name="serial" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mã thẻ:</label>
+                        <input type="text" class="form-control" name="code" required>
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-success btn-block">🔐 MUA KEY NGAY</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+
+<!-- MODAL THÔNG BÁO VIP -->
+<div class="modal fade" id="keyModal" tabindex="-1" role="dialog" aria-labelledby="keyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content text-center">
+      <div class="modal-header border-0">
+        <h5 class="modal-title w-100" id="keyModalLabel">🎉 ĐÂY LÀ KEY CỦA BẠN 🎉</h5>
+        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" id="keyModalBody" style="font-size: 20px;">
+        Đang xử lý...
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-success" data-dismiss="modal">OK VIP</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+function showKeyModal(message) {
+    document.getElementById("keyModalBody").innerHTML = message;
+    $('#keyModal').modal('show');
+}
+</script>
 </body>
 </html>
